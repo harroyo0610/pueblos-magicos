@@ -24,6 +24,7 @@ class Api::V1::RegistrationsController < Devise::RegistrationsController
   end
 
   def ensure_params_exist
+    
     return if params[:user].present?
     render json: {
         messages: "Missing Params",
